@@ -47,6 +47,5 @@ async function submit() {
 
     state.textContent = stateMap[data.state]
     error.textContent = data.error
-
   }
 }
