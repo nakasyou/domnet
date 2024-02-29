@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMNET</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+  </head>
+  <body>
+    <div>
+      <div class="text-center my-2">
+        Enter name
+        <input id="name" class="input" />
+      </div>
+      <div class="text-center my-2">
+        <button onclick="submit()" class="btn">Submit</button>
+      </div>
+      <div class="grid justify-center">
+        <table class="table">
+          <thead>
+            <th class="px-4">Domain</th>
+            <th class="px-4">State</th>
+            <th class="px-4">Error</th>
+          </thead>
+          <tbody id="domains"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
