@@ -22,9 +22,12 @@ async function submit() {
     const tr = document.createElement('tr')
     tr.innerHTML = `
       <td>${domain}</td>
-      <td id="${domain}-state">Pending...</td>
+      <td id="${domain}-state">
+        <div class="loading loading-dots loading-md">
+      </div></td>
       <td class="max-w-64 whitespace-nowrap overflow-x-scroll">
         <div id="${domain}-error">
+          <div class="loading loading-dots loading-md">
         </div>
       </td>`
     $domains.append(tr)
