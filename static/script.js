@@ -33,8 +33,9 @@ async function submit() {
     $domains.append(tr)
   }
 
-  const socket = new WebSocket(`/get-domain/${encodeURI(name)}`)
 
+  const wsUrl = new URL(`${location.protocol.replace('http', 'ws')}//${location.hostname}:${location.port}/get-domain/${encodeURI(name)}`)
+  const socket = new WebSocket(wsUrl)
   socket.onmessage = (evt) => {
     /**
      * @type {{
