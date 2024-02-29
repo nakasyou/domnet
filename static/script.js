@@ -5,7 +5,7 @@ const decoder = new TextDecoder()
 
 const stateMap = {
   error: '👻',
-  can: '🙆‍♀️',
+  can: '🙆‍♂️',
   cant: '🙅‍♀️'
 }
 async function submit() {
