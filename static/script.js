@@ -1,12 +1,12 @@
-const $name = document.getElementById("name")
-const $domains = document.getElementById("domains")
+const $name = document.getElementById('name')
+const $domains = document.getElementById('domains')
 
 const decoder = new TextDecoder()
 
 const stateMap = {
   error: '👻',
   can: '🙆‍♂️',
-  cant: '🙅‍♀️'
+  cant: '🙅‍♀️',
 }
 async function submit() {
   const name = $name.value
@@ -16,7 +16,7 @@ async function submit() {
   /**
    * @type { string[] }
    */
-  const tlds = await fetch('/get-tlds').then(res => res.json())
+  const tlds = await fetch('/get-tlds').then((res) => res.json())
 
   for (const domain of tlds.map((tld) => `${name}.${tld}`)) {
     const tr = document.createElement('tr')
@@ -33,8 +33,11 @@ async function submit() {
     $domains.append(tr)
   }
 
-
-  const wsUrl = new URL(`${location.protocol.replace('http', 'ws')}//${location.hostname}:${location.port}/get-domain/${encodeURI(name)}`)
+  const wsUrl = new URL(
+    `${
+      location.protocol.replace('http', 'ws')
+    }//${location.hostname}:${location.port}/get-domain/${encodeURI(name)}`,
+  )
   const socket = new WebSocket(wsUrl)
   socket.onmessage = (evt) => {
     /**

@@ -1,5 +1,13 @@
 {
-  "version": "3",
+  "version": "4",
+  "specifiers": {
+    "jsr:@hono/hono@^4.6.9": "4.6.9"
+  },
+  "jsr": {
+    "@hono/hono@4.6.9": {
+      "integrity": "4d4975f5c023d4416d26e6dd4a498c56e59958561733f56f55a9be57f023603b"
+    }
+  },
   "redirects": {
     "https://deno.land/x/hono/helper.ts": "https://deno.land/x/hono@v4.0.8/helper.ts",
     "https://esm.sh/hono": "https://esm.sh/hono@4.0.8"
@@ -110,5 +118,10 @@
     "https://esm.sh/v135/hono@4.0.8/denonext/utils/body.js": "f0fef5a9ff83b121c7e18ba08e227073e6d0dc3bbd557b00364dac2907677a90",
     "https://esm.sh/v135/hono@4.0.8/denonext/utils/html.js": "a434a023c447faf8d56ef693e37a9cbfa80b88bcda8b44b935c91e66b9515393",
     "https://esm.sh/v135/hono@4.0.8/denonext/utils/url.js": "3d1716727be52b791d987cc9b59841c39af7352f5501164eb58e2185f6efe27f"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@hono/hono@^4.6.9"
+    ]
   }
 }

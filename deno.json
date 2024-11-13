@@ -1,17 +1,21 @@
 {
-    "tasks": {
-        "dev": "deno run -A --watch main.ts",
-        "sort": "deno run --allow-write=tlds.json format-tlds.ts"
-    },
-    "fmt": {
-        "useTabs": false,
-        "indentWidth": 2,
-        "semiColons": false
-    },
-    "compilerOptions": {
-        "lib": [
-            "deno.window",
-            "dom"
-        ]
-    }
+  "tasks": {
+    "dev": "deno run -A --watch main.ts",
+    "sort": "deno run --allow-write=tlds.json format-tlds.ts"
+  },
+  "fmt": {
+    "useTabs": false,
+    "indentWidth": 2,
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "compilerOptions": {
+    "lib": [
+      "deno.window",
+      "dom"
+    ]
+  },
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.6.9"
+  }
 }
